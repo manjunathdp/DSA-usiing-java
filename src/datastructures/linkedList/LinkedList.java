@@ -14,6 +14,10 @@ public class LinkedList {
         System.out.println("Length: " + length);
     }
     public void printList() {
+        if (head==null) {
+            System.out.println("Empty List");
+            return;
+        }
         Node temp = head;
         while (temp!=null) {
             System.out.print(temp.value + " => ");
