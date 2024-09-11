@@ -23,14 +23,13 @@ public class LinkedList {
     }
     public void append(int value) {
         Node newNode = new Node(value);
-        if(head==null && tail==null) {
+        if(head==null) {
             head = newNode;
-            tail = newNode;
         }
         else {
             tail.nextNode=newNode;
-            tail = newNode;
         }
+        tail = newNode;
 
 
         length++;
