@@ -30,8 +30,17 @@ public class LinkedList {
             tail.nextNode=newNode;
         }
         tail = newNode;
-
-
         length++;
+    }
+    public  void prepend(int value) {
+        Node newNode = new Node(value);
+        if (head==null) {
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            newNode.nextNode=head;
+            head=newNode;
+        }
     }
 }
