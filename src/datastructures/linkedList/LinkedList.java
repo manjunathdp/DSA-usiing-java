@@ -52,6 +52,7 @@ public class LinkedList {
             //Node lastNode=head;
             head = null;
             tail = null;
+            length--;
             //return lastNode;
         }
         Node temp = head;
@@ -63,6 +64,7 @@ public class LinkedList {
         //Node lastNode=tail;
         pre.nextNode=null;
         tail=pre;
+        length--;
         //return lastNode;
     }
 }
