@@ -47,6 +47,7 @@ public class LinkedList {
     public void /* Node */ removeLast() {
         if(head==null && tail==null) {
             System.out.println("List is Empty");
+            return;
             //return null;
         }
         if (head==tail) {
@@ -54,6 +55,7 @@ public class LinkedList {
             head = null;
             tail = null;
             length--;
+            return;
             //return lastNode;
         }
         Node temp = head;

@@ -21,8 +21,14 @@ public class Main {
         l1.printList();
         l1.getLength();
         l1.removeFirst();
+        l1.printList();
         l1.removeFirst();
+        l1.printList();
         l1.removeFirst();
+        l1.printList();
         l1.removeFirst();
+        l1.printList();
+        l1.removeLast();
+        l1.printList();
     }
 }
