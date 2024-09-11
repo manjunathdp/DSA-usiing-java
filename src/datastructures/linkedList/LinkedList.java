@@ -117,27 +117,33 @@ public class LinkedList {
         return null;
     }
 
-    public boolean insertAt(int index, int value) {
+    public void insertAt(int index, int value) {
         if (index>length || index<0) {
             System.out.println("Invalid index");
-            return false;
+            return;
         } else if (index==length-1){
             append(value);
             length++;
-            return true;
+            return;
             }
         else if (index==0) {
             prepend(value);
             length++;
-            return true;
+            return;
         }
         Node newNode = new Node(value);
         Node temp = get(index-1);
         newNode.nextNode=temp.nextNode;
         temp.nextNode=newNode;
         length++;
-        return true;
     }
-
+public void set(int index, int value) {
+    if (index > length || index < 0) {
+        System.out.println("Invalid index");
+        return;
+        }
+    Node temp = get(index);
+    temp.value = value;
+}
 
 }

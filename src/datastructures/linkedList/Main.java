@@ -39,5 +39,7 @@ public class Main {
         System.out.println("Inserting Node through index");
         l1.insertAt(1, 25);
         l1.printList();
+        l1.set(1,100);
+        l1.printList();
     }
 }
