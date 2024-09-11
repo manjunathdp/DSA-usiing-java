@@ -42,6 +42,7 @@ public class LinkedList {
             newNode.nextNode=head;
             head=newNode;
         }
+        length++;
     }
     public void /* Node */ removeLast() {
         if(head==null && tail==null) {
@@ -66,5 +67,24 @@ public class LinkedList {
         tail=pre;
         length--;
         //return lastNode;
+    }
+    public void /* Node */ removeFirst() {
+        if(head==null) {
+            System.out.println("List is Empty");
+            //return null;
+        }
+        if (head==tail) {
+            //Node firstNode=head;
+            head = null;
+            tail = null;
+            length--;
+            //return firstNode;
+            return;
+        }
+        // Node firstNode=head;
+        head=head.nextNode;
+        length--;
+        //return firstNode;
+
     }
 }
