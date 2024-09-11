@@ -90,4 +90,26 @@ public class LinkedList {
         //return firstNode;
 
     }
+
+    public Node getNodeByIndex(int index) {
+        if (index>length || index < 0) {
+            System.out.println("Invalid Index");
+            return null;
+        }
+
+        if (head!=null) {
+            int tempIndex=0;
+            Node temp=head;
+            while (temp!=null){
+                if (tempIndex==index) {
+                    return temp;
+                }
+                temp=temp.nextNode;
+                tempIndex++;
+
+            }
+        }
+        System.out.println("List is empty");
+        return null;
+    }
 }
