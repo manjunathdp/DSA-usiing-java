@@ -72,6 +72,7 @@ public class LinkedList {
         if(head==null) {
             System.out.println("List is Empty");
             //return null;
+            return;
         }
         if (head==tail) {
             //Node firstNode=head;
