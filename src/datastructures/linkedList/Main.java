@@ -30,5 +30,10 @@ public class Main {
         l1.printList();
         l1.removeLast();
         l1.printList();
+        l1.append(10);
+        l1.append(20);
+        System.out.println("Getting node through index");
+        //Node n = l1.get(1);
+        System.out.println(l1.get(1).value);
     }
 }

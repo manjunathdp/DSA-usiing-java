@@ -91,7 +91,7 @@ public class LinkedList {
 
     }
 
-    public Node getNodeByIndex(int index) {
+    public Node get(int index) {
         if (index>length || index < 0) {
             System.out.println("Invalid Index");
             return null;
@@ -112,4 +112,6 @@ public class LinkedList {
         System.out.println("List is empty");
         return null;
     }
+
+
 }
