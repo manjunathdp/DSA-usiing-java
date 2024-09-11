@@ -169,4 +169,21 @@ public class LinkedList {
     public boolean isEmpty() {
         return head == null;
     }
+
+    public void reverse() {
+        //swapping head and tail with the help of temp
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        //flipping the nodes
+        Node after = temp.nextNode;
+        Node before = null;
+
+        for (int i = 0; i < length; i++) {
+            after = temp.nextNode;
+            temp.nextNode = before;
+            before = temp;
+            temp = after;
+        }
+    }
 }

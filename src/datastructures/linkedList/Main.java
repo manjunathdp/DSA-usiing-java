@@ -29,6 +29,9 @@ public class Main {
         System.out.println("Modifying value of index 1: ");
         l1.set(1, 100);
         getInfo(l1);
+        System.out.println("Reversing the Linked List: ");
+        l1.reverse();
+        getInfo(l1);
     }
 
     public static void getInfo(LinkedList l1) {
