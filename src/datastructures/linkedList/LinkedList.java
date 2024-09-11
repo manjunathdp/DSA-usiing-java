@@ -19,7 +19,7 @@ public class LinkedList {
             System.out.print(temp.value + " => ");
             temp=temp.nextNode;
         }
-        System.out.print("null");
+        System.out.println("null");
     }
     public void append(int value) {
         Node newNode = new Node(value);
@@ -32,7 +32,7 @@ public class LinkedList {
         tail = newNode;
         length++;
     }
-    public  void prepend(int value) {
+    public void prepend(int value) {
         Node newNode = new Node(value);
         if (head==null) {
             head = newNode;
@@ -42,5 +42,27 @@ public class LinkedList {
             newNode.nextNode=head;
             head=newNode;
         }
+    }
+    public void /* Node */ removeLast() {
+        if(head==null && tail==null) {
+            System.out.println("List is Empty");
+            //return null;
+        }
+        if (head==tail) {
+            //Node lastNode=head;
+            head = null;
+            tail = null;
+            //return lastNode;
+        }
+        Node temp = head;
+        Node pre = head;
+        while (temp.nextNode!=null){
+            pre=temp;
+            temp=temp.nextNode;
+        }
+        //Node lastNode=tail;
+        pre.nextNode=null;
+        tail=pre;
+        //return lastNode;
     }
 }
