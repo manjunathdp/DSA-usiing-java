@@ -5,9 +5,17 @@ public class LinkedList {
     private Node tail;
     private int length;
     public void getHead() {
+        if (isEmpty()){
+            System.out.println("Empty Linked List");
+            return;
+        }
         System.out.println("Head: " + head.value);
     }
     public void getTail() {
+        if (isEmpty()){
+            System.out.println("Empty Linked List");
+            return;
+        }
         System.out.println("Tail: " + tail.value);
     }
     public void getLength() {
@@ -146,4 +154,7 @@ public void set(int index, int value) {
     temp.value = value;
 }
 
+public boolean isEmpty() {
+    return head == null;
+}
 }
