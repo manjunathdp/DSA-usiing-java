@@ -4,12 +4,6 @@ public class LinkedList {
     private Node head;
     private Node tail;
     private int length;
-    public LinkedList(int value) {
-        Node newNode = new Node(value);
-        this.tail = newNode;
-        this.head = newNode;
-        this.length = 1;
-    }
     public void getHead() {
         System.out.println("Head: " + head.value);
     }
@@ -21,9 +15,24 @@ public class LinkedList {
     }
     public void printList() {
         Node temp = head;
-        while (temp.nextNode!=null) {
-            System.out.println(temp.value);
+        while (temp!=null) {
+            System.out.print(temp.value + " => ");
             temp=temp.nextNode;
         }
+        System.out.print("null");
+    }
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if(head==null && tail==null) {
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            tail.nextNode=newNode;
+            tail = newNode;
+        }
+
+
+        length++;
     }
 }
