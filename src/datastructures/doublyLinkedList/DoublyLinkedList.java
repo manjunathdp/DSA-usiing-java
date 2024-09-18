@@ -26,4 +26,8 @@ public class DoublyLinkedList {
             System.out.println("Tail: " + tail);
         }
     }
+
+    public void getLength() {
+        System.out.println("Length: " + length);
+    }
 }
