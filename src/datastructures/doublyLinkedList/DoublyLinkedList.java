@@ -32,6 +32,20 @@ public class DoublyLinkedList {
         System.out.println("Length: " + length);
     }
 
+    public void printList() {
+        if (isEmpty()){
+            System.out.println("Empty Doubly Linked List");
+        }
+        else {
+            Node temp = head;
+            while (!isEmpty()) {
+                System.out.print(temp.value + " => " );
+                temp=temp.nextNode;
+            }
+            System.out.print("null");
+        }
+    }
+
     public void append(int value) {
         Node newNode = new Node(value);
         if (isEmpty()) {
