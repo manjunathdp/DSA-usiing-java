@@ -5,6 +5,7 @@ public class DoublyLinkedList {
     private Node tail;
     private int length;
 
+
     public boolean isEmpty(){
         return head == null;
     }
@@ -30,4 +31,17 @@ public class DoublyLinkedList {
     public void getLength() {
         System.out.println("Length: " + length);
     }
+
+    public void append(int value) {
+        Node newNode = new Node(value);
+        if (isEmpty()) {
+            head = newNode;
+        }
+        else {
+            newNode.previousNode=tail;
+        }
+        tail = newNode;
+        length++;
+    }
+
 }
