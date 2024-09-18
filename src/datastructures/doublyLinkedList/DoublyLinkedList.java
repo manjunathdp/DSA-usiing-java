@@ -15,7 +15,7 @@ public class DoublyLinkedList {
             System.out.println("Empty Doubly Linked List");
         }
         else {
-            System.out.println("Head: " + head);
+            System.out.println("Head: " + head.value);
         }
     }
 
@@ -24,7 +24,7 @@ public class DoublyLinkedList {
             System.out.println("Empty Doubly Linked List");
         }
         else {
-            System.out.println("Tail: " + tail);
+            System.out.println("Tail: " + tail.value);
         }
     }
 
@@ -38,11 +38,11 @@ public class DoublyLinkedList {
         }
         else {
             Node temp = head;
-            while (!isEmpty()) {
+            while (temp != null) {
                 System.out.print(temp.value + " => " );
                 temp=temp.nextNode;
             }
-            System.out.print("null");
+            System.out.println("null");
         }
     }
 
@@ -53,6 +53,7 @@ public class DoublyLinkedList {
         }
         else {
             newNode.previousNode=tail;
+            tail.nextNode=newNode;
         }
         tail = newNode;
         length++;
@@ -67,6 +68,7 @@ public class DoublyLinkedList {
             newNode.nextNode = head;
         }
         head = newNode;
+        length++;
     }
 
 }
