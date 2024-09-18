@@ -8,4 +8,13 @@ public class DoublyLinkedList {
     public boolean isEmpty(){
         return head == null;
     }
+
+    public void getHead() {
+        if(isEmpty()) {
+            System.out.println("Empty Doubly Linked List");
+        }
+        else {
+            System.out.println("Head: " + head);
+        }
+    }
 }
