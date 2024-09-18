@@ -17,4 +17,13 @@ public class DoublyLinkedList {
             System.out.println("Head: " + head);
         }
     }
+
+    public void getTail() {
+        if(isEmpty()) {
+            System.out.println("Empty Doubly Linked List");
+        }
+        else {
+            System.out.println("Tail: " + tail);
+        }
+    }
 }
