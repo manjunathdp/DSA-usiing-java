@@ -1,7 +1,6 @@
 package datastructures.doublyLinkedList;
 
 
-
 public class Main {
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
@@ -17,7 +16,13 @@ public class Main {
         dll.prepend(30);
         dll.prepend(40);
         getInfo(dll);
+
+        System.out.println("Applying Remove Last Method:");
+        dll.removeLast();
+        dll.removeLast();
+        getInfo(dll);
     }
+
     public static void getInfo(DoublyLinkedList l1) {
         l1.printList();
         l1.getHead();

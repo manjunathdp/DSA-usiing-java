@@ -72,4 +72,21 @@ public class DoublyLinkedList {
         length++;
     }
 
+    public void removeLast() {
+        if (!isEmpty()){
+            if (head == tail) {
+                head = null;
+                tail = null;
+            } else {
+                tail = tail.previousNode;
+                tail.nextNode=null;
+            }
+            length--;
+        }
+        else {
+            System.out.println("Empty Doubly Linked List");
+        }
+
+    }
+
 }
