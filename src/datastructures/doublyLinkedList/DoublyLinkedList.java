@@ -66,6 +66,7 @@ public class DoublyLinkedList {
         }
         else {
             newNode.nextNode = head;
+            head.previousNode = newNode;
         }
         head = newNode;
         length++;
