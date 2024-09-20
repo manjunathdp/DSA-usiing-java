@@ -27,6 +27,11 @@ public class Main {
         dll.removeFirst();
         dll.removeLast();
         getInfo(dll);
+
+        System.out.println("Applying getNode(index: ) Method:");
+        dll.printList();
+        System.out.println("The value At index 0: " + dll.getNode(0).value);
+
     }
 
     public static void getInfo(DoublyLinkedList l1) {

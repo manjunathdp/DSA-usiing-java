@@ -1,4 +1,5 @@
 package datastructures.doublyLinkedList;
+
 // doubly Linked list
 public class DoublyLinkedList {
     private Node head;
@@ -6,24 +7,22 @@ public class DoublyLinkedList {
     private int length;
 
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return head == null;
     }
 
     public void getHead() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             System.out.println("Empty Doubly Linked List");
-        }
-        else {
+        } else {
             System.out.println("Head: " + head.value);
         }
     }
 
     public void getTail() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             System.out.println("Empty Doubly Linked List");
-        }
-        else {
+        } else {
             System.out.println("Tail: " + tail.value);
         }
     }
@@ -33,14 +32,13 @@ public class DoublyLinkedList {
     }
 
     public void printList() {
-        if (isEmpty()){
+        if (isEmpty()) {
             System.out.println("Empty Doubly Linked List");
-        }
-        else {
+        } else {
             Node temp = head;
             while (temp != null) {
-                System.out.print(temp.value + " => " );
-                temp=temp.nextNode;
+                System.out.print(temp.value + " => ");
+                temp = temp.nextNode;
             }
             System.out.println("null");
         }
@@ -50,10 +48,9 @@ public class DoublyLinkedList {
         Node newNode = new Node(value);
         if (isEmpty()) {
             head = newNode;
-        }
-        else {
-            newNode.previousNode=tail;
-            tail.nextNode=newNode;
+        } else {
+            newNode.previousNode = tail;
+            tail.nextNode = newNode;
         }
         tail = newNode;
         length++;
@@ -61,10 +58,9 @@ public class DoublyLinkedList {
 
     public void prepend(int value) {
         Node newNode = new Node(value);
-        if(isEmpty()) {
+        if (isEmpty()) {
             tail = newNode;
-        }
-        else {
+        } else {
             newNode.nextNode = head;
             head.previousNode = newNode;
         }
@@ -73,36 +69,47 @@ public class DoublyLinkedList {
     }
 
     public void removeLast() {
-        if (!isEmpty()){
+        if (!isEmpty()) {
             if (head == tail) {
                 head = null;
                 tail = null;
             } else {
                 tail = tail.previousNode;
-                tail.nextNode=null;
+                tail.nextNode = null;
             }
             length--;
-        }
-        else {
+        } else {
             System.out.println("Empty Doubly Linked List");
         }
 
     }
 
     public void removeFirst() {
-        if (!isEmpty()){
+        if (!isEmpty()) {
             if (head == tail) {
                 head = null;
                 tail = null;
             } else {
                 head = head.nextNode;
-                head.previousNode=null;
+                head.previousNode = null;
             }
             length--;
-        }
-        else {
+        } else {
             System.out.println("Empty Doubly Linked List");
         }
+
+    }
+
+    public Node getNode(int index) {
+        if (index < 0 || index >= length) {
+            System.out.println("invalid index");
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.nextNode;
+        }
+        return temp;
 
     }
 
