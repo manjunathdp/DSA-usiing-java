@@ -15,10 +15,16 @@ public class Main {
         System.out.println("Applying Prepend Method:");
         dll.prepend(30);
         dll.prepend(40);
+        dll.prepend(50);
         getInfo(dll);
 
         System.out.println("Applying Remove Last Method:");
         dll.removeLast();
+        dll.removeLast();
+        getInfo(dll);
+
+        System.out.println("Applying Remove First Method:");
+        dll.removeFirst();
         dll.removeLast();
         getInfo(dll);
     }
