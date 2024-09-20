@@ -113,4 +113,29 @@ public class DoublyLinkedList {
 
     }
 
+    public void insertAt(int index, int value) {
+        if (index < 0 || index > length) {
+            System.out.println("invalid index");
+            return ;
+        }
+        if (index==0){
+            prepend(value);
+            return;
+        }
+        if (index==length) {
+            append(value);
+            return;
+        }
+        Node newNode = new Node(value);
+        Node temp=getNode(index);
+        newNode.nextNode=temp;
+        newNode.previousNode=temp.previousNode;
+        if (temp.previousNode != null) {
+            temp.previousNode.nextNode = newNode;
+        }
+        temp.previousNode=newNode;
+        length++;
+
+    }
+
 }

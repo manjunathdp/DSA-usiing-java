@@ -32,6 +32,10 @@ public class Main {
         dll.printList();
         System.out.println("The value At index 0: " + dll.getNode(0).value);
 
+        System.out.println("Applying insertAt(index, value) Method:");
+        dll.insertAt(0,1);
+        dll.insertAt(1,2);
+        getInfo(dll);
     }
 
     public static void getInfo(DoublyLinkedList l1) {
