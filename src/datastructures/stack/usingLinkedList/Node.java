@@ -2,10 +2,10 @@ package datastructures.stack.usingLinkedList;
 
 public class Node {
     private int value;
-    private Node nextNode;
+    private Node previousNode;
 
     public Node(int value) {
         this.value = value;
-        nextNode = null;
+        previousNode = null;
     }
 }
