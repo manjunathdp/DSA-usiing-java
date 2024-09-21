@@ -20,4 +20,17 @@ public class Stack {
         System.out.println("Length: " + length);
     }
 
+    public void printStack() {
+        if (isEmpty()) {
+            System.out.println("Stack is Empty");
+            return;
+        }
+        Node temp = top;
+        while (temp != null) {
+            System.out.println("| " + temp.getValue() + " |");
+            System.out.println("----");
+            temp = temp.getBottomNode();
+        }
+    }
+
 }

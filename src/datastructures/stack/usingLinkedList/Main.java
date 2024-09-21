@@ -6,6 +6,7 @@ public class Main {
         System.out.println(s.isEmpty());
         s.getTop();
         s.getLength();
+        s.printStack();
 
     }
 }
