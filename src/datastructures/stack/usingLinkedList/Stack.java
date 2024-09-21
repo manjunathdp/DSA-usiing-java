@@ -35,13 +35,10 @@ public class Stack {
 
     public void push(int value) {
         Node newNode = new Node(value);
-        if(isEmpty()) {
-            top = newNode;
-        }
-        else {
+        if (!isEmpty()) {
             newNode.setBottomNode(top);
-            top=newNode;
         }
+        top = newNode;
         length++;
     }
 
