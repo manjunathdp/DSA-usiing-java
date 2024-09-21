@@ -29,17 +29,25 @@ public class Stack {
         while (temp != null) {
             System.out.println("| " + temp.getValue() + " |");
             System.out.println("------");
-            temp = temp.getBottomNode();
+            temp = temp.getBelowNode();
         }
     }
 
     public void push(int value) {
         Node newNode = new Node(value);
         if (!isEmpty()) {
-            newNode.setBottomNode(top);
+            newNode.setBelowNode(top);
         }
         top = newNode;
         length++;
+    }
+
+    public void pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is Empty");
+            return;
+        }
+        top=top.getBelowNode();
     }
 
 }

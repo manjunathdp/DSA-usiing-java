@@ -2,11 +2,11 @@ package datastructures.stack.usingLinkedList;
 
 public class Node {
     private int value;
-    private Node bottomNode;
+    private Node belowNode ;
 
     public Node(int value) {
-        this.value = value;
-        bottomNode = null;
+        setValue(value);
+        setBelowNode(null);
     }
 
     public int getValue() {
@@ -17,11 +17,11 @@ public class Node {
         this.value = value;
     }
 
-    public Node getBottomNode() {
-        return bottomNode;
+    public Node getBelowNode() {
+        return belowNode;
     }
 
-    public void setBottomNode(Node bottomNode) {
-        this.bottomNode = bottomNode;
+    public void setBelowNode(Node belowNode) {
+        this.belowNode = belowNode;
     }
 }

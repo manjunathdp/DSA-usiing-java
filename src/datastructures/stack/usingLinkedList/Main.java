@@ -11,8 +11,13 @@ public class Main {
         System.out.println("Applying Push() method: ");
         s.push(10);
         s.push(20);
+        s.push(30);
         getInfo(s);
 
+        System.out.println("Applying pop() method: ");
+        s.pop();
+        s.pop();
+        getInfo(s);
     }
 
     public static void getInfo(Stack s) {
