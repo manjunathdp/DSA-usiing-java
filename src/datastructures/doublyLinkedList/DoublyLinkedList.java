@@ -138,4 +138,14 @@ public class DoublyLinkedList {
 
     }
 
+    public void set(int index, int value) {
+        if (index < 0 || index > length) {
+            System.out.println("invalid index");
+            return;
+        }
+        Node temp = getNode(index);
+        temp.value = value;
+    }
+
+
 }

@@ -36,6 +36,11 @@ public class Main {
         dll.insertAt(0, 1);
         dll.insertAt(1, 2);
         getInfo(dll);
+
+        System.out.println("Applying set(index, value) Method:");
+        dll.set(0, 10);
+        dll.set(1, 20);
+        getInfo(dll);
     }
 
     public static void getInfo(DoublyLinkedList l1) {
