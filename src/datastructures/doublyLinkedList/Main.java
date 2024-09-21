@@ -16,6 +16,7 @@ public class Main {
         dll.prepend(30);
         dll.prepend(40);
         dll.prepend(50);
+        dll.prepend(60);
         getInfo(dll);
 
         System.out.println("Applying Remove Last Method:");
@@ -41,6 +42,12 @@ public class Main {
         dll.set(0, 10);
         dll.set(1, 20);
         getInfo(dll);
+
+        System.out.println("Applying remove(index) Method:");
+        dll.remove(1);
+        dll.remove(1);
+        getInfo(dll);
+
     }
 
     public static void getInfo(DoublyLinkedList l1) {

@@ -147,5 +147,24 @@ public class DoublyLinkedList {
         temp.value = value;
     }
 
-
+    public void remove(int index) {
+        if (index < 0 || index > length) {
+            System.out.println("invalid index");
+            return;
+        }
+        if (index == 0) {
+            removeFirst();
+            return;
+        }
+        if (index == length) {
+            removeLast();
+            return;
+        }
+        Node temp = getNode(index);
+        temp.previousNode.nextNode = temp.nextNode;
+        temp.nextNode.previousNode = temp.previousNode;
+        temp.nextNode = null;
+        temp.previousNode = null;
+        length--;
+    }
 }
