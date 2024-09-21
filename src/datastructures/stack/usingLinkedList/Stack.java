@@ -28,9 +28,21 @@ public class Stack {
         Node temp = top;
         while (temp != null) {
             System.out.println("| " + temp.getValue() + " |");
-            System.out.println("----");
+            System.out.println("------");
             temp = temp.getBottomNode();
         }
+    }
+
+    public void push(int value) {
+        Node newNode = new Node(value);
+        if(isEmpty()) {
+            top = newNode;
+        }
+        else {
+            newNode.setBottomNode(top);
+            top=newNode;
+        }
+        length++;
     }
 
 }
