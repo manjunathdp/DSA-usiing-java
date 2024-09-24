@@ -12,5 +12,12 @@ public class Main {
         q.printQueue();
         q.enqueue(20);
         q.printQueue();
+        q.enqueue(30);
+        q.printQueue();
+        System.out.println("Performing dequeue operation: ");
+        q.dequeue();
+        q.printQueue();
+        q.dequeue();
+        q.printQueue();
     }
 }

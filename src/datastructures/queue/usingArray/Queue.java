@@ -1,11 +1,11 @@
 package datastructures.queue.usingArray;
 
 public class Queue {
-    final int MAX = 100;
-    int front = -1;
-    int rear = -1;
-    int length = 0;
-    int[] queue = new int[MAX];
+    private final int MAX = 100;
+    private int front = -1;
+    private int rear = -1;
+    private int length = 0;
+    private final int[] queue = new int[MAX];
 
     public boolean isFull() {
         return length == MAX;
@@ -39,6 +39,18 @@ public class Queue {
         }
         queue[rear] = value;
         length++;
+    }
+
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is Empty");
+        } else {
+            rear--;
+            length--;
+            for (int i = front; i <= rear; i++) {
+                queue[i] = queue[i + 1];
+            }
+        }
     }
 
 }
