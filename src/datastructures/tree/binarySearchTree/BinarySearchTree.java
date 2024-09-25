@@ -27,13 +27,45 @@ public class BinarySearchTree {
                     temp = temp.right;
                 }
             } else {
-                if (temp.left==null) {
-                    temp.left=newNode;
+                if (temp.left == null) {
+                    temp.left = newNode;
                     return;
                 } else {
-                    temp=temp.left;
+                    temp = temp.left;
                 }
             }
         }
+    }
+
+    public void search(int key) {
+        if (root == null) {
+            System.out.println("Tree is Empty");
+            return;
+        }
+        if (root.value == key) {
+            System.out.println("Fount at Root");
+            return;
+        }
+        Node temp = root;
+        while (temp != null) {
+            if (key > temp.value) {
+                if (temp.right == null)
+                    break;
+                if (temp.right.value == key) {
+                    System.out.println("Found at the right side of the Root");
+                    return;
+                }
+                temp = temp.right;
+            } else {
+                if (temp.left == null)
+                    break;
+                if (temp.left.value == key) {
+                    System.out.println("Found at the left side of the Root");
+                    return;
+                }
+                temp = temp.left;
+            }
+        }
+        System.out.println("Not Found");
     }
 }
